@@ -2,4 +2,4 @@ allowBuilds:
   '@google/genai': false
   esbuild: false
   protobufjs: false
-  workerd: set this to true or false
+  workerd: false

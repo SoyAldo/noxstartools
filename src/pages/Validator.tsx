@@ -2,8 +2,12 @@ import { useState, useEffect } from 'react';
 import { FileCheck, AlertCircle, CheckCircle2, Copy, Trash2, Wand2, Check, Minimize2 } from 'lucide-react';
 import { load as yamlLoad, dump as yamlDump } from 'js-yaml';
 import { parse as tomlParse } from 'toml';
-import Editor, { useMonaco } from '@monaco-editor/react';
+import Editor, { useMonaco, loader } from '@monaco-editor/react';
+import * as monaco from 'monaco-editor';
 import SEO from '../components/SEO';
+
+// Prevenir problemas de CDN cargando Monaco de forma local
+loader.config({ monaco });
 
 export default function Validator() {
   const [format, setFormat] = useState('yaml');

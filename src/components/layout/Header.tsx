@@ -24,7 +24,7 @@ export default function Header() {
         {/* Dropdown Herramientas */}
         <div className="relative h-full flex items-center group">
           <button className={`h-full flex items-center gap-1 px-4 text-sm font-medium transition-colors border-b-2 ${
-            ['/status', '/hex-generator'].includes(location.pathname) 
+            ['/status', '/hex-generator', '/validator'].includes(location.pathname) 
               ? 'border-primary text-primary bg-white/5' 
               : 'border-transparent text-gray-400 hover:text-gray-200 hover:bg-white/5'
           }`}>
@@ -35,8 +35,11 @@ export default function Header() {
             <Link to="/status" className={`px-4 py-2.5 text-sm hover:bg-white/5 transition-colors ${location.pathname === '/status' ? 'text-primary font-bold' : 'text-gray-300'}`}>
               Monitor de Servidor
             </Link>
+            <Link to="/validator" className={`px-4 py-2.5 text-sm hover:bg-white/5 transition-colors ${location.pathname === '/validator' ? 'text-primary font-bold' : 'text-gray-300'}`}>
+              Validador de Archivos
+            </Link>
             <Link to="/hex-generator" className={`px-4 py-2.5 text-sm hover:bg-white/5 transition-colors ${location.pathname === '/hex-generator' ? 'text-primary font-bold' : 'text-gray-300'}`}>
-              Generador Hexadecimal
+              Generador Hex
             </Link>
           </div>
         </div>

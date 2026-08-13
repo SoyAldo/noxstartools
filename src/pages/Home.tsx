@@ -37,7 +37,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
         {/* ACTIVE TOOLS */}
-        <Link to="/status" className="col-span-1 md:col-span-6 bg-panel border border-primary/30 rounded-xl p-6 hover:border-primary transition-all hover:-translate-y-1 group flex flex-col justify-between relative overflow-hidden">
+        <Link to="/status" className="col-span-1 md:col-span-4 bg-panel border border-primary/30 rounded-xl p-6 hover:border-primary transition-all hover:-translate-y-1 group flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:bg-primary/10 transition-colors"></div>
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
@@ -46,7 +46,7 @@ export default function Home() {
               </div>
               <h2 className="text-xl font-bold text-gray-100">Monitor de Servidor</h2>
             </div>
-            <p className="text-gray-400 text-sm mb-6">Consulta en vivo el estado, jugadores y MOTD de cualquier servidor IP de Java o Bedrock.</p>
+            <p className="text-gray-400 text-sm mb-6">Consulta en vivo el estado, jugadores y MOTD de cualquier servidor IP.</p>
           </div>
           <div className="flex bg-canvas border border-panel-border px-4 py-2 rounded-lg items-center gap-3 shadow-inner w-fit">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </Link>
 
-        <Link to="/hex-generator" className="col-span-1 md:col-span-6 bg-panel border border-primary/30 rounded-xl p-6 hover:border-primary transition-all hover:-translate-y-1 group flex flex-col justify-between relative overflow-hidden">
+        <Link to="/hex-generator" className="col-span-1 md:col-span-4 bg-panel border border-primary/30 rounded-xl p-6 hover:border-primary transition-all hover:-translate-y-1 group flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full group-hover:bg-secondary/10 transition-colors"></div>
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
@@ -63,26 +63,31 @@ export default function Home() {
               </div>
               <h2 className="text-xl font-bold text-gray-100">Generador Hexadecimal</h2>
             </div>
-            <p className="text-gray-400 text-sm mb-6">Crea gradientes y textos a color para plugins como MiniMessage o Legacy de forma visual.</p>
+            <p className="text-gray-400 text-sm mb-6">Crea gradientes y textos a color para plugins como MiniMessage.</p>
           </div>
           <div className="flex bg-canvas border border-panel-border px-4 py-2 rounded-lg items-center gap-2 shadow-inner w-fit">
             <span className="font-mono text-sm font-bold" style={{ backgroundImage: 'linear-gradient(to right, #54daf4, #ffffff)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Texto en Gradiente</span>
           </div>
         </Link>
 
-        {/* INACTIVE TOOLS (PRÓXIMAMENTE) */}
-        <div className="col-span-1 md:col-span-4 bg-panel/40 border border-panel-border rounded-xl p-6 opacity-60 flex flex-col justify-start">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="p-2 bg-black/50 rounded-lg text-gray-500 border border-panel-border">
-              <Terminal className="w-5 h-5" />
+        <Link to="/validator" className="col-span-1 md:col-span-4 bg-panel border border-primary/30 rounded-xl p-6 hover:border-primary transition-all hover:-translate-y-1 group flex flex-col justify-between relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full group-hover:bg-primary/10 transition-colors"></div>
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-black rounded-lg text-primary border border-panel-border">
+                <Terminal className="w-5 h-5" />
+              </div>
+              <h2 className="text-xl font-bold text-gray-100">Validador de Archivos</h2>
             </div>
-            <h2 className="text-xl font-bold text-gray-400">Validador</h2>
+            <p className="text-gray-400 text-sm mb-6">Valida archivos YAML, JSON o TOML sin salir del panel.</p>
           </div>
-          <span className="text-[10px] font-bold bg-primary/10 text-primary px-2 py-0.5 rounded uppercase tracking-wider mb-3 w-fit">Próximamente</span>
-          <p className="text-gray-500 text-sm">Valida archivos YAML, JSON o TOML sin salir del panel. Previene errores de sintaxis.</p>
-        </div>
+          <div className="flex bg-canvas border border-panel-border px-4 py-2 rounded-lg items-center gap-2 shadow-inner w-fit">
+             <span className="font-mono text-sm text-gray-300">config.yml</span>
+          </div>
+        </Link>
 
-        <div className="col-span-1 md:col-span-4 bg-panel/40 border border-panel-border rounded-xl p-6 opacity-60 flex flex-col justify-start">
+        {/* INACTIVE TOOLS (PRÓXIMAMENTE) */}
+        <div className="col-span-1 md:col-span-6 bg-panel/40 border border-panel-border rounded-xl p-6 opacity-60 flex flex-col justify-start">
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 bg-black/50 rounded-lg text-gray-500 border border-panel-border">
               <Map className="w-5 h-5" />
@@ -93,7 +98,7 @@ export default function Home() {
           <p className="text-gray-500 text-sm">Analiza reportes de Spark Profiler de forma mucho más intuitiva y rápida.</p>
         </div>
 
-        <div className="col-span-1 md:col-span-4 bg-panel/40 border border-panel-border rounded-xl p-6 opacity-60 flex flex-col justify-start">
+        <div className="col-span-1 md:col-span-6 bg-panel/40 border border-panel-border rounded-xl p-6 opacity-60 flex flex-col justify-start">
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 bg-black/50 rounded-lg text-gray-500 border border-panel-border">
               <Box className="w-5 h-5" />

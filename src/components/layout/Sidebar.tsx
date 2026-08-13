@@ -1,4 +1,4 @@
-import { Activity, Palette } from 'lucide-react';
+import { Activity, Palette, Settings, Gauge } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppStore } from '../../store/useAppStore';
 import { cn } from '../../lib/utils';
@@ -9,9 +9,9 @@ export default function Sidebar() {
 
   const links = [
     { name: 'Status', path: '/status', icon: Activity },
-    // { name: 'Validador', path: '/validator', icon: Settings },
+    { name: 'Validador de Archivos', path: '/validator', icon: Settings },
     // { name: 'Spark Analyzer', path: '/spark-analyzer', icon: Gauge },
-    { name: 'Hex Generator', path: '/hex-generator', icon: Palette },
+    { name: 'Generador Hex', path: '/hex-generator', icon: Palette },
   ];
 
   return (

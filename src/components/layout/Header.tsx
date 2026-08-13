@@ -8,8 +8,8 @@ export default function Header() {
 
   const links = [
     { name: 'Status', path: '/status' },
-    { name: 'Validador', path: '/validator' },
-    { name: 'Spark Analyzer', path: '/spark-analyzer' },
+    // { name: 'Validador', path: '/validator' },
+    // { name: 'Spark Analyzer', path: '/spark-analyzer' },
     { name: 'Hex Generator', path: '/hex-generator' },
   ];
 
@@ -35,8 +35,8 @@ export default function Header() {
               key={link.path}
               to={link.path}
               className={`h-full flex items-center px-4 text-sm font-medium transition-colors border-b-2 ${isActive
-                  ? 'border-primary text-primary bg-white/5'
-                  : 'border-transparent text-gray-400 hover:text-gray-200 hover:bg-white/5'
+                ? 'border-primary text-primary bg-white/5'
+                : 'border-transparent text-gray-400 hover:text-gray-200 hover:bg-white/5'
                 }`}
             >
               {link.name}

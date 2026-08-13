@@ -29,9 +29,9 @@ Si tienes tu código en GitHub o GitLab, puedes conectarlo para que cada vez que
 7. En la configuración de compilación (Build settings):
    * **Project name:** Elige el nombre de tu proyecto.
    * **Production branch:** Generalmente es `main` o `master`.
-   * **Framework preset:** Como es una página estática simple, selecciona **"None"**.
-   * **Build command:** Déjalo en blanco.
-   * **Build output directory:** Déjalo en blanco (o pon el nombre de la carpeta si tu `index.html` está dentro de una).
+   * **Framework preset:** Selecciona **"React"** o **"Vite"** (o déjalo en None y configura lo de abajo).
+   * **Build command:** Escribe `bun run build` (o `npm run build`).
+   * **Build output directory:** Escribe `dist` (que es la carpeta que genera Vite).
 8. Haz clic en **"Save and Deploy"** (Guardar y Desplegar).
 9. Cloudflare construirá y publicará tu sitio y te proporcionará una URL.
 

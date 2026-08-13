@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Activity, Search, AlertTriangle, CheckCircle, Info } from 'lucide-react';
+import SEO from '../components/SEO';
 
 interface AnalysisResult {
   title: string;
@@ -101,7 +102,12 @@ export default function SparkAnalyzer() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col p-4 lg:p-8 gap-6 animate-in fade-in duration-500">
+    <>
+      <SEO 
+        title="Analizador de Spark Timings | NoxstarTools" 
+        description="Analiza los reportes de Spark Profiler para encontrar las causas del lag en tu servidor de Minecraft."
+      />
+      <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col p-4 lg:p-8 gap-6 animate-in fade-in duration-500">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
         <div className="flex flex-col gap-2 mb-2">
@@ -175,5 +181,6 @@ export default function SparkAnalyzer() {
         <p>3. Selecciona la pestaña "Botton-up" o el árbol principal, copia el texto de las entradas que más porcentaje consumen y pégalas aquí para identificar su causa común.</p>
       </div>
     </div>
+    </>
   );
 }

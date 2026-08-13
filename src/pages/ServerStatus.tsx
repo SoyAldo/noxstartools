@@ -5,6 +5,7 @@ import {
   Activity, Server, Users, Info, RefreshCw, FileJson, X,
   Copy, Check, Gamepad2, ShieldAlert, Layers, MapPin, Cpu
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 type Edition = 'java' | 'bedrock';
 
@@ -206,7 +207,12 @@ function ServerStatusContent() {
   }, [data]);
 
   return (
-    <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col p-4 pb-12 lg:p-8 lg:pb-24 gap-6 animate-in fade-in duration-500">
+    <>
+      <SEO 
+        title="Monitor de Servidores | Java & Bedrock - NoxstarTools" 
+        description="Consulta en vivo el estado, jugadores y MOTD de cualquier servidor IP de Minecraft en sus versiones de Java y Bedrock."
+      />
+      <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col p-4 pb-12 lg:p-8 lg:pb-24 gap-6 animate-in fade-in duration-500">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
         <div className="flex flex-col gap-2 mb-2">
@@ -677,6 +683,6 @@ function ServerStatusContent() {
         </div>
       )}
     </div>
+    </>
   );
 }
-

@@ -1,9 +1,15 @@
 import { Terminal, Code, MessageSquare, Box, Map, Layout, Activity, Palette } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Home() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-12 md:py-24">
+    <>
+      <SEO 
+        title="NoxstarTools | La suite definitiva para administradores de servidores" 
+        description="Optimiza, configura y gestiona tu servidor de Minecraft con herramientas visuales de alta precisión como monitores de estado y generadores hexadecimales."
+      />
+      <div className="w-full max-w-6xl mx-auto px-4 py-12 md:py-24">
       {/* Hero */}
       <div className="text-center max-w-3xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-panel border border-panel-border text-primary text-xs font-mono mb-8">
@@ -100,5 +106,6 @@ export default function Home() {
 
       </div>
     </div>
+    </>
   );
 }

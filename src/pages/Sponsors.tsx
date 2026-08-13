@@ -1,8 +1,14 @@
 import { Star, Gift, Crown, ExternalLink, Server, LayoutTemplate } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Sponsors() {
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-8 md:py-12 animate-in fade-in duration-500">
+    <>
+      <SEO 
+        title="Patrocinadores | Apoya a NoxstarTools" 
+        description="Descubre cómo apoyar el desarrollo de NoxstarTools y conoce a nuestros patrocinadores principales como NoxstarStudios y NatublockHost."
+      />
+      <div className="w-full max-w-5xl mx-auto px-4 py-8 md:py-12 animate-in fade-in duration-500">
       
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-bold mb-6 uppercase tracking-widest">
@@ -122,5 +128,6 @@ export default function Sponsors() {
       </div>
 
     </div>
+    </>
   );
 }

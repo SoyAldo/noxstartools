@@ -1,8 +1,14 @@
 import { Terminal, Code, Users, Heart, Shield, Cpu } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function About() {
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-12 md:py-24 animate-in fade-in duration-500">
+    <>
+      <SEO 
+        title="Acerca de NoxstarTools | Herramientas para Servidores Minecraft" 
+        description="NoxstarTools es la suite definitiva para administradores de servidores de Minecraft, diseñada para optimizar y gestionar tu servidor con precisión."
+      />
+      <div className="w-full max-w-5xl mx-auto px-4 py-12 md:py-24 animate-in fade-in duration-500">
       
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6 uppercase tracking-widest">
@@ -65,5 +71,6 @@ export default function About() {
       </div>
 
     </div>
+    </>
   );
 }

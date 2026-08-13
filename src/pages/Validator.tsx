@@ -3,6 +3,7 @@ import { FileCheck, AlertCircle, CheckCircle2, Copy, Trash2, Wand2, Check, Minim
 import { load as yamlLoad, dump as yamlDump } from 'js-yaml';
 import { parse as tomlParse } from 'toml';
 import Editor, { useMonaco } from '@monaco-editor/react';
+import SEO from '../components/SEO';
 
 export default function Validator() {
   const [format, setFormat] = useState('yaml');
@@ -151,7 +152,12 @@ export default function Validator() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col p-4 lg:p-8 gap-6 animate-in fade-in duration-500">
+    <>
+      <SEO 
+        title="Validador de Configuración (YAML/JSON) | NoxstarTools" 
+        description="Verifica y valida archivos YAML y JSON para evitar errores en la configuración de tus plugins de Minecraft."
+      />
+      <div className="w-full max-w-7xl mx-auto min-h-screen flex flex-col p-4 lg:p-8 gap-6 animate-in fade-in duration-500">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
         <div className="flex flex-col gap-2 mb-2">
@@ -308,5 +314,6 @@ export default function Validator() {
         </div>
       </div>
     </div>
+    </>
   );
 }

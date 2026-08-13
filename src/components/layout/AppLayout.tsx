@@ -5,11 +5,8 @@ import Sidebar from './Sidebar';
 
 export default function AppLayout() {
   const location = useLocation();
-  const isHome = location.pathname === '/';
-  const isLegal = location.pathname === '/legal';
-
-  // We hide the sidebar on the landing page and legal page for a cleaner look.
-  const showSidebar = !isHome && !isLegal;
+  const noSidebarRoutes = ['/', '/legal', '/about', '/sponsors'];
+  const showSidebar = !noSidebarRoutes.includes(location.pathname);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -19,7 +16,7 @@ export default function AppLayout() {
         <main className={`flex-1 flex flex-col h-[calc(100vh-64px)] overflow-hidden ${showSidebar ? 'lg:ml-64' : ''}`}>
           <div className="flex-1 overflow-y-auto relative flex flex-col h-full">
              <Outlet />
-             {(isHome || isLegal) && <Footer />}
+             {!showSidebar && <Footer />}
           </div>
         </main>
       </div>

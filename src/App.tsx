@@ -6,8 +6,9 @@ import HexGenerator from './pages/HexGenerator';
 import SparkAnalyzer from './pages/SparkAnalyzer';
 import Legal from './pages/Legal';
 import Validator from './pages/Validator';
-import Plugins from './pages/Plugins';
 import ServerStatus from './pages/ServerStatus';
+import About from './pages/About';
+import Sponsors from './pages/Sponsors';
 
 const queryClient = new QueryClient();
 
@@ -22,8 +23,9 @@ export default function App() {
             <Route path="/spark-analyzer" element={<SparkAnalyzer />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/validator" element={<Validator />} />
-            <Route path="/plugins" element={<Plugins />} />
             <Route path="/status" element={<ServerStatus />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route path="*" element={
               <div className="flex items-center justify-center h-full p-8 text-gray-400">
                 <div className="text-center">
